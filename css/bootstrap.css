@@ -987,9 +987,10 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.1;
   color: inherit;
+  letter-spacing: 1pt;
 }
 h1 small,
 h2 small,
@@ -1101,6 +1102,14 @@ p {
 @media (min-width: 768px) {
   .lead {
     font-size: 21px;
+  }
+}
+.scales {
+  font-size: 0.7em;
+}
+@media (min-width: 768px) {
+  .scales {
+    font-size: 1em;
   }
 }
 small,
@@ -3754,7 +3763,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-top-left-radius: 0;
 }
 .navbar {
-  letter-spacing: 1px;
+  letter-spacing: 1pt;
   font-weight: 300;
   position: relative;
   min-height: 70px;
@@ -3922,6 +3931,25 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+}
+.navbar-nav > li > a::before {
+  content: " ";
+  border-bottom: 1px solid transparent;
+  position: absolute;
+  width: 60%;
+  left: 20%;
+  top: 100%;
+  -webkit-transition: all 0.21s ease-in-out;
+  -o-transition: all 0.21s ease-in-out;
+  transition: all 0.21s ease-in-out;
+}
+.navbar-nav > li > a:hover::before,
+.navbar-nav > li > a:focus::before,
+.navbar-nav > li > a.active::before {
+  width: 90%;
+  left: 5%;
+  top: 51%;
+  border-bottom: 1px solid #fff;
 }
 @media (max-width: 899px) {
   .navbar-nav .open .dropdown-menu {
@@ -4105,17 +4133,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #000000;
   background-color: transparent;
 }
+.navbar-default .navbar-nav > li > a:hover::before,
+.navbar-default .navbar-nav > li > a:focus::before {
+  border-bottom: 1px solid #000000;
+}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #000000;
   background-color: none;
 }
-.navbar-default .navbar-nav > .disabled > a,
-.navbar-default .navbar-nav > .disabled > a:hover,
-.navbar-default .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
-  background-color: transparent;
+.navbar-default .navbar-nav > .active > a::before,
+.navbar-default .navbar-nav > .active > a:hover::before,
+.navbar-default .navbar-nav > .active > a:focus::before {
+  border-bottom: 1px solid #000000;
 }
 .navbar-default .navbar-toggle {
   border-color: #dddddd;
@@ -4152,12 +4183,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     color: #000000;
     background-color: none;
   }
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
-    background-color: transparent;
-  }
 }
 .navbar-default .navbar-link {
   color: #383838;
@@ -4171,12 +4196,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
   color: #000000;
-}
-.navbar-default .btn-link[disabled]:hover,
-fieldset[disabled] .navbar-default .btn-link:hover,
-.navbar-default .btn-link[disabled]:focus,
-fieldset[disabled] .navbar-default .btn-link:focus {
-  color: #cccccc;
 }
 .navbar-inverse {
   background-color: transparent;
@@ -4200,27 +4219,28 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff;
   background-color: transparent;
-  text-decoration: line-through;
+}
+.navbar-inverse .navbar-nav > li > a:hover::before,
+.navbar-inverse .navbar-nav > li > a:focus::before {
+  border-bottom: 1px solid #ffffff;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0);
-  text-decoration: line-through;
 }
-.navbar-inverse .navbar-nav > .disabled > a,
-.navbar-inverse .navbar-nav > .disabled > a:hover,
-.navbar-inverse .navbar-nav > .disabled > a:focus {
-  color: #444444;
-  background-color: transparent;
+.navbar-inverse .navbar-nav > .active > a::before,
+.navbar-inverse .navbar-nav > .active > a:hover::before,
+.navbar-inverse .navbar-nav > .active > a:focus::before {
+  border-bottom: 1px solid #ffffff;
 }
 .navbar-inverse .navbar-toggle {
-  border-color: #333333;
+  border-color: #ffffff;
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #333333;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #ffffff;
@@ -4262,25 +4282,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
     color: #444444;
     background-color: transparent;
   }
-}
-.navbar-inverse .navbar-link {
-  color: #f0f0f0;
-}
-.navbar-inverse .navbar-link:hover {
-  color: #ffffff;
-}
-.navbar-inverse .btn-link {
-  color: #f0f0f0;
-}
-.navbar-inverse .btn-link:hover,
-.navbar-inverse .btn-link:focus {
-  color: #ffffff;
-}
-.navbar-inverse .btn-link[disabled]:hover,
-fieldset[disabled] .navbar-inverse .btn-link:hover,
-.navbar-inverse .btn-link[disabled]:focus,
-fieldset[disabled] .navbar-inverse .btn-link:focus {
-  color: #444444;
 }
 .breadcrumb {
   padding: 8px 15px;
@@ -6183,6 +6184,12 @@ button.close {
   width: 137px;
   height: 180px;
 }
+.navbar-inverse .logo:hover .st0 {
+  fill: #000000;
+}
+.navbar-default .logo:hover .st0 {
+  fill: #ff0000;
+}
 .screen {
   display: block;
   width: 100%;
@@ -6190,8 +6197,15 @@ button.close {
   position: relative;
 }
 .screen-intro {
-  background-image: url(img/intro.png);
+  background-image: url(img/intro.jpg);
   background-size: cover;
   background-position: center;
+  color: #f0f0f0;
+}
+.screen-intro h1 {
+  margin-top: 2em;
+}
+.screen-intro p.lead {
+  padding: 1em;
 }
 /*# sourceMappingURL=bootstrap.css.map */

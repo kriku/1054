@@ -13,3 +13,18 @@
     src: url(fonts/Formular-Medium.otf);
     font-weight: 500;
 }
+@font-face {
+    font-family: Formular;
+    src: url(fonts/Formular-Bold.otf);
+    font-weight: 600;
+}
+
+.Drop_x0020_Shadow{fill:none;}
+.Round_x0020_Corners_x0020_2_x0020_pt{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+.Live_x0020_Reflect_x0020_X{fill:none;}
+.Bevel_x0020_Soft{fill:url(#SVGID_1_);}
+.Dusk{fill:#FFFFFF;}
+.Foliage_GS{fill:#FFDD00;}
+.Pompadour_GS{fill-rule:evenodd;clip-rule:evenodd;fill:#44ADE2;}
+.st0{fill:#383938;}
+.navbar-inverse .st0{fill:#f0f0f0;}
