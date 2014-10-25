@@ -507,6 +507,12 @@ h2,
 .h2 {
   font-size: 19.5px;
 }
+@media (min-width: 480px) {
+  h2,
+  .h2 {
+    font-size: 27px;
+  }
+}
 @media (min-width: 768px) {
   h2,
   .h2 {
@@ -552,10 +558,16 @@ h4,
   font-weight: 200;
   font-size: 12.75px;
 }
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   h4,
   .h4 {
     font-size: 15px;
+  }
+}
+@media (min-width: 768px) {
+  h4,
+  .h4 {
+    font-size: 16.5px;
   }
 }
 @media (min-width: 920px) {
@@ -2773,10 +2785,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:focus::before {
   border-bottom: 1px solid #000000;
 }
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  color: #dddddd;
-}
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
@@ -2851,16 +2859,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-nav > .active > a:hover::before,
 .navbar-inverse .navbar-nav > .active > a:focus::before {
   border-bottom: 1px solid #ffffff;
-}
-.navbar-inverse .navbar-toggle {
-  border-color: #ffffff;
-}
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #ffffff;
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
