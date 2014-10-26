@@ -561,30 +561,30 @@ h3,
 h4,
 .h4 {
   font-weight: 200;
-  font-size: 12.75px;
+  font-size: 13.3px;
 }
 @media (min-width: 480px) {
   h4,
   .h4 {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 @media (min-width: 768px) {
   h4,
   .h4 {
-    font-size: 16.5px;
+    font-size: 15.4px;
   }
 }
 @media (min-width: 920px) {
   h4,
   .h4 {
-    font-size: 18px;
+    font-size: 16.8px;
   }
 }
 @media (min-width: 1300px) {
   h4,
   .h4 {
-    font-size: 19.5px;
+    font-size: 18.2px;
   }
 }
 h5,
@@ -699,6 +699,11 @@ mark,
 }
 .text-justify {
   text-align: justify;
+}
+@media (min-width: 768px) {
+  .text-justify {
+    text-align: justify;
+  }
 }
 .text-nowrap {
   white-space: nowrap;
