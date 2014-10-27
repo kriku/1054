@@ -241,11 +241,8 @@ th {
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
-.fi-arrow_down:before {
-  content: "\e60f";
-}
-.fi-menu:before {
-  content: "\e610";
+.fi-long_aroow_right:before {
+  content: "\e60a";
 }
 .fi-logo:before {
   content: "\e600";
@@ -253,44 +250,47 @@ th {
 .fi-arrow_left:before {
   content: "\e601";
 }
-.fi-arrow_right:before {
+.fi-arrow_down:before {
   content: "\e602";
 }
-.fi-be:before {
+.fi-arrow_right:before {
   content: "\e603";
 }
-.fi-cloud:before {
+.fi-be:before {
   content: "\e604";
 }
-.fi-crane:before {
+.fi-cloud:before {
   content: "\e605";
 }
-.fi-heart:before {
+.fi-crane:before {
   content: "\e606";
 }
-.fi-lection:before {
+.fi-heart:before {
   content: "\e607";
 }
-.fi-long_aroow_left:before {
+.fi-lection:before {
   content: "\e608";
 }
-.fi-long_aroow_right:before {
+.fi-long_aroow_left:before {
   content: "\e609";
 }
 .fi-lsh:before {
-  content: "\e60a";
-}
-.fi-pixel:before {
   content: "\e60b";
 }
-.fi-skull:before {
+.fi-menu:before {
   content: "\e60c";
 }
-.fi-vk:before {
+.fi-pix:before {
   content: "\e60d";
 }
-.fi-work:before {
+.fi-skull:before {
   content: "\e60e";
+}
+.fi-vk:before {
+  content: "\e60f";
+}
+.fi-work:before {
+  content: "\e610";
 }
 * {
   -webkit-box-sizing: border-box;
@@ -402,7 +402,6 @@ h6,
 .h6 {
   font-family: inherit;
   font-weight: 600;
-  line-height: 1.1;
   color: inherit;
   letter-spacing: 1pt;
 }
@@ -440,6 +439,7 @@ h2,
 .h2,
 h3,
 .h3 {
+  line-height: 1.2;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -463,6 +463,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  line-height: 1.38;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -813,13 +814,13 @@ a.text-danger:hover {
   text-align: left;
   top: 1.6em;
   left: -8em;
-  content: "\e609";
+  content: "\e60a";
 }
 .text-in-arrows:after {
   text-align: right;
   bottom: 1.6em;
   right: -8em;
-  content: "\e608";
+  content: "\e609";
 }
 @media (max-width: 767px) {
   .text-in-arrows {
@@ -832,12 +833,10 @@ a.text-danger:hover {
   .text-in-arrows:before {
     top: 0;
     left: 0;
-    content: "\e609";
   }
   .text-in-arrows:after {
     bottom: 0;
     right: 0;
-    content: "\e608";
   }
 }
 .bg-primary {
