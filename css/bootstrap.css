@@ -701,7 +701,7 @@ mark,
   text-align: justify;
 }
 @media (min-width: 768px) {
-  .text-justify {
+  .text-justify-sm {
     text-align: justify;
   }
 }
