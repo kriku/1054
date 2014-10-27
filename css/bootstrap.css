@@ -528,7 +528,7 @@ h2,
 @media (min-width: 1300px) {
   h2,
   .h2 {
-    font-size: 39px;
+    font-size: 36px;
   }
 }
 h3,
@@ -3572,7 +3572,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin: 2em 0;
 }
 .screen p > i {
-  margin: 0.2em 0;
+  margin: 0.1em 0;
 }
 .screen-intro {
   background-image: url(img/intro.jpg);
